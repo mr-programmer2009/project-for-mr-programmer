@@ -1,0 +1,382 @@
+body {
+    font-family: 'Vazir', sans-serif;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    background-color: #ffffff;
+}
+html{
+    scroll-behavior: smooth;
+    transform: 6s;
+}
+a{
+    text-decoration: none;
+     color: #17a2b8;
+     display: block;
+    line-height: 1.4;
+    display: inline-block;
+    margin: 0 12px;
+    list-style-type: none;
+    text-align: left;
+  } 
+  
+header {
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#site-title {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+#language-toggle {
+    background-color: #ffffff;
+    color: #417c41;
+    border: 2px solid #5cb85c;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#language-toggle:hover {
+    background-color: #5cb85c;
+    color: #ffffff;
+}
+
+main {
+    padding: 80px 20px 20px; /* Top padding accounts for fixed header */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 2rem;
+    color: #7da17d;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+#biography {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+#gallery {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 60px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #5cb85c;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: 10px;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+} */
+
+.sidebar {
+    width: 200px;
+    background-color: #1c3d5a; /* رنگ سرمه‌ای */
+    height: 100vh; /* تمام ارتفاع صفحه */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    position: fixed; /* ثابت کردن منو */
+    top: 0;
+    left: 0;
+}
+
+.sidebar a, .dropdown-btn {
+    display: block;
+    width: 90%;
+    padding: 20px;
+    margin: 10px auto;
+    text-align: center;
+    background-color: #990033; /* رنگ جگری */
+    color: #f5f5dc; /* رنگ شیری برای متن */
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.sidebar a:hover, .dropdown-btn:hover {
+    background-color: #800026; /* تغییر رنگ هنگام هاور */
+}
+
+.dropdown-container {
+    display: none;
+    background-color: #1c3d5a;
+    padding-left: 15px;
+}
+
+.dropdown-container a {
+    padding: 10px;
+    background-color: #990033; /* رنگ جگری */
+    margin-top: 5px;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+/* تغییر رنگ برای آیتم‌های کشویی هنگام هاور */
+.dropdown-container a:hover {
+    background-color: #660022; /* رنگ تیره‌تر هنگام هاور */
+}
+
+/* نمایش کشویی با هاور */
+.sidebar:hover .dropdown-container {
+    display: block;
+}
+
+/* برای فوتر ثابت */
+footer {
+    width: 100%;
+    background-color: #1c3d5a;
+    color: #f5f5dc;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.sidebar:hover .dropdown-container {
+    display: block;
+}
+.dropdown-container a:hover {
+    background-color: #660022; /* رنگ تیره‌تر هنگام هاور */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Vazir', sans-serif; /* اضافه کردن فونت وزیر */
+}
+
+body {
+    min-height: 100vh;
+    direction: rtl; /* برای نمایش درست متن فارسی */
+}
+
+.wave-header {
+    position: relative;
+    background: linear-gradient(to bottom, #006400, #00a65a); /* گرادینت از سبز پررنگ به سبز کمرنگ */
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    overflow: hidden; /* برای جلوگیری از نمایش موج خارج از محدوده هدر */
+    font-weight: 400; /* تنظیم فونت نازک */
+}
+
+.wave-header h1 {
+    font-size: 36px; /* تنظیم اندازه فونت */
+    font-weight: 400; /* فونت نازک */
+}
+
+.wave {
+    position: absolute;
+    bottom: 0; /* قرار دادن موج در پایین هدر */
+    left: 0;
+    width: 100%;
+    height: 150px;
+    z-index: 1;
+    fill: #00a65a; /* رنگ سبز کمرنگ برای موج */
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5)); /* اضافه کردن سایه به موج */
+    transform: scaleY(-1); /* معکوس کردن جهت موج */
+}
+#language-switcher {
+    text-align: right;
+    margin: 10px;
+}
+
+#language-switcher button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+#language-switcher button:hover {
+    background-color: #ddd;
+}
+
+#header-content {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.translatable {
+    font-size: 1.5em;
+    color: #333;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #282c34;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav button {
+    background-color: #61dafb;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #21a1f1;
+}
+
+main {
+    padding: 20px;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 5px 0;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+footer {
+    background-color: #282c34;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+/* نوار اسکرول برای مرورگرهای Webkit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 12px; /* عرض نوار اسکرول */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff6666; /* رنگ نوار اسکرول */
+    border-radius: 10px; /* گوشه‌های گرد نوار اسکرول */
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0; /* رنگ پس‌زمینه نوار اسکرول */
+}
+
+/* نوار اسکرول برای مرورگرهای Firefox */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #ff6666 #f0f0f0;
+}
+
+/* نوار اسکرول برای مرورگرهای غیر Webkit و غیر Firefox */
+body {
+    scrollbar-color: #ff6666 #f0f0f0;
+}
